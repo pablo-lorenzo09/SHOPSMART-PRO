@@ -117,7 +117,6 @@ function lucro() {
         resultado.innerHTML=
 
         `
-          <h2>Memória de Cálculo</h2>
               <ul>
                   <li><span>Lucro</span> </li>
                   <li>O preço de venda é: <span>${v1}</span> </li>
