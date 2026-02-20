@@ -19,9 +19,9 @@ function calcularTotal() {
         `
               <ul>
                   <li><span>Valor Total</span> </li>
-                  <li>O preço do produto é: <span>${v1}</span> </li>
+                  <li>O preço do produto é: <span>R$${v1.toFixed(2)}</span> </li>
                   <li>A quantidade do produto é: <span>${v2}</span> </li>       
-                  <li>Então você pagará <span>${v1 * v2}</span></li>
+                  <li>Então você pagará <span>R$${(v1 * v2).toFixed(2)}</span></li>
               </ul>
           `;
   
@@ -45,8 +45,8 @@ function desconto() {
               <ul>
                   <li><span>Desconto</span> </li>
                   <li>O preço do produto é: <span>${v1}</span> </li>    
-                  <li>O desconto é <span>${(v1 * v2)/100}</span></li>
-                  <li>Então o total com o desconto é <span>${v1 - ((v1 * v2)/100)}</span></li>
+                  <li>o desconto de ${v2}% será de <span>R$${((v1 * v2)/100).toFixed(2)}</span></li>
+                  <li>Então o total com o desconto é <span>R$${(v1 - ((v1 * v2)/100)).toFixed(2)}</span></li>
               </ul>
           `;
   
@@ -70,8 +70,8 @@ function juros() {
               <ul>
                   <li><span>Juros</span> </li>
                   <li>O preço do produto é: <span>${v1}</span> </li>    
-                  <li>O acrescimo é <span>${(v1 * v2)/100}</span></li>
-                  <li>Então o juros total com o acrescimo é <span>${v1 + ((v1 * v2)/100)}</span></li>
+                  <li>O acréscimo é de <span>R$${((v1 * v2)/100).toFixed(2)}</span></li>
+                  <li>Então o juros total com o acréscimo é <span>R$${(v1 + ((v1 * v2)/100)).toFixed(2)}</span></li>
               </ul>
           `;
   
@@ -94,9 +94,9 @@ function comissao() {
         `
               <ul>
                   <li><span>Comissão</span> </li>
-                  <li>O valor total da venda : <span>${v1}</span> </li>
-                  <li>a porcentagem de comissão é de: <span>${v2}</span> </li>       
-                  <li>A comissão total é <span>${v1 *(v2/100)}</span></li>
+                  <li>O valor total da venda é: <span>R$${v1.toFixed(2)}</span> </li>
+                  <li>a porcentagem de comissão é de: <span>${v2}%</span> </li>       
+                  <li>A comissão total é <span>R$${(v1 *(v2/100)).toFixed(2)}</span></li>
               </ul>
           `;
   
@@ -119,9 +119,9 @@ function lucro() {
         `
               <ul>
                   <li><span>Lucro</span> </li>
-                  <li>O preço de venda é: <span>${v1}</span> </li>
-                  <li>O custo de venda é: <span>${v2}</span> </li>       
-                  <li>Então o lucro é: <span>${v1 - v2}</span></li>
+                  <li>O preço de venda é: <span>R$${v1.toFixed(2)}</span> </li>
+                  <li>O custo de venda é: <span>R$${v2.toFixed(2)}</span> </li>       
+                  <li>Então o lucro é: <span>R$${(v1 - v2).toFixed(2)}</span></li>
               </ul>
           `;
   
