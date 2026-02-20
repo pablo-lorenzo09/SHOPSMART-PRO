@@ -25,6 +25,9 @@ function calcularTotal() {
     }
 
     else {
+
+        total = (v1 * v2).toFixed(2)
+
         resultado.style.display= 'flex'
 
         resultado.innerHTML=
@@ -34,7 +37,7 @@ function calcularTotal() {
                   <li><span>Valor Total</span> </li>
                   <li>O preço do produto é: <span>R$ ${v1.toFixed(2)}</span> </li>
                   <li>A quantidade do produto é: <span>${v2}</span> </li>       
-                  <li>Então você pagará <span>R$ ${(v1 * v2).toFixed(2)}</span></li>
+                  <li>Então você pagará <span>R$ ${total}</span></li>
               </ul>
           `;
   
@@ -50,6 +53,9 @@ function desconto() {
     }
 
     else {
+
+        totalComDesconto = (v1 - ((v1 * v2)/100)).toFixed(2)
+
         resultado.style.display= 'flex'
 
         resultado.innerHTML=
@@ -59,7 +65,7 @@ function desconto() {
                   <li><span>Desconto</span> </li>
                   <li>O preço do produto é: <span>${v1}</span> </li>    
                   <li>o desconto de ${v2}% será de <span>R$ ${((v1 * v2)/100).toFixed(2)}</span></li>
-                  <li>Então o total com o desconto é <span>R$ ${(v1 - ((v1 * v2)/100)).toFixed(2)}</span></li>
+                  <li>Então o total com o desconto é <span>R$ ${totalComDesconto}</span></li>
               </ul>
           `;
   
@@ -67,6 +73,8 @@ function desconto() {
 }
 
 function juros() {
+
+    
     const v1 = parseFloat (input01.value);
     const v2 = parseFloat (input02.value);
 
@@ -75,6 +83,8 @@ function juros() {
     }
 
     else {
+        valorComJuros = (v1 + ((v1 * v2)/100)).toFixed(2)
+
         resultado.style.display= 'flex'
 
         resultado.innerHTML=
@@ -83,7 +93,7 @@ function juros() {
               <ul>
                   <li><span>Juros</span> </li>
                   <li>Foi aplicado um valor de ${v2}% sobre o valor de R$ ${v1.toFixed(2)}</span> </li>    
-                  <li>O valor final com juros é de <span>R$ ${(v1 + ((v1 * v2)/100)).toFixed(2)}</span></li>
+                  <li>O valor final com juros é de <span>R$ ${valorComJuros}</span></li>
               </ul>
           `;
   
@@ -91,6 +101,7 @@ function juros() {
 }
 
 function comissao() {
+
     const v1 = parseFloat (input01.value);
     const v2 = parseFloat (input02.value);
 
@@ -99,6 +110,9 @@ function comissao() {
     }
 
     else {
+
+        comissaoTotal = (v1 *(v2/100)).toFixed(2)
+
         resultado.style.display= 'flex'
 
         resultado.innerHTML=
@@ -108,7 +122,7 @@ function comissao() {
                   <li><span>Comissão</span> </li>
                   <li>O valor total da venda é: <span>R$ ${v1.toFixed(2)}</span> </li>
                   <li>a porcentagem de comissão é de: <span> ${v2}%</span> </li>       
-                  <li>A comissão total é <span>R$ ${(v1 *(v2/100)).toFixed(2)}</span></li>
+                  <li>A comissão total é <span>R$ ${comissaoTotal} </span></li>
               </ul>
           `;
   
@@ -116,6 +130,7 @@ function comissao() {
 }
 
 function lucro() {
+
     const v1 = parseFloat (input01.value);
     const v2 = parseFloat (input02.value);
 
@@ -124,6 +139,9 @@ function lucro() {
     }
 
     else {
+
+        lucroTotal = (v1 - v2).toFixed(2)
+
         resultado.style.display= 'flex'
 
         resultado.innerHTML=
@@ -133,7 +151,7 @@ function lucro() {
                   <li><span>Lucro</span> </li>
                   <li>O preço de venda é: <span>R$ ${v1.toFixed(2)}</span> </li>
                   <li>O custo de venda é: <span>R$ ${v2.toFixed(2)}</span> </li>       
-                  <li>Então o lucro é: <span>R$ ${(v1 - v2).toFixed(2)}</span></li>
+                  <li>Então o lucro é: <span>R$ ${lucroTotal}</span></li>
               </ul>
           `;
   
