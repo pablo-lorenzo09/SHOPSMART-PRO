@@ -82,9 +82,8 @@ function juros() {
         `
               <ul>
                   <li><span>Juros</span> </li>
-                  <li>O preço do produto é: <span>${v1}</span> </li>    
-                  <li>O acréscimo é de <span>R$ ${((v1 * v2)/100).toFixed(2)}</span></li>
-                  <li>Então o juros total com o acréscimo é <span>R$ ${(v1 + ((v1 * v2)/100)).toFixed(2)}</span></li>
+                  <li>Foi aplicado um valor de ${v2}% sobre o valor de R$ ${v1.toFixed(2)}</span> </li>    
+                  <li>O valor final com juros é de <span>R$ ${(v1 + ((v1 * v2)/100)).toFixed(2)}</span></li>
               </ul>
           `;
   
