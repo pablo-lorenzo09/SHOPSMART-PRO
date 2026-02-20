@@ -142,8 +142,8 @@ function lucro() {
 
 function limpar() {
     resultado.style.display= 'none'
-    document.getElementById('valor01').value = '';
-    document.getElementById('valor02').value = '';
+    input01.value = '';
+    input02.value = '';
 
     input01.focus()
 }
